@@ -1,14 +1,9 @@
+/* my array */
 const authorizedMail = ['fabioPacifici@gmail.com', 'ArturMamedov@gmail.com', 'GiulianoGostinfini@libero.it'];
 const userInput = document.getElementById("user_input");
 let userFound = false;
 
 const accessStatus = document.getElementById("Access_status");
-
-
-
-/* console.log(userInput); */
-console.log(authorizedMail);
-
 
 document.getElementById("my_form").addEventListener('submit', function (e) {
   e.preventDefault();
@@ -22,7 +17,6 @@ document.getElementById("my_form").addEventListener('submit', function (e) {
       console.log("access in progress...");
       userFound = true;
 
-
       break;
     }
     else {
@@ -30,6 +24,7 @@ document.getElementById("my_form").addEventListener('submit', function (e) {
     }
   }
 
+  /* schermata personalizzata per l'user  */
   if (userFound = true && userInputCheck === 'fabioPacifici@gmail.com') {
     let myAccess = document.createElement('h5');
     let myImage = document.createElement('img');
@@ -52,10 +47,9 @@ function rollTheDice() {
   let diceNum1 = document.getElementById("dice1");
   let diceNum2 = document.getElementById("dice2");
 
+  /* add gif animation */
   diceNum1.setAttribute("src", "../assets/img/diceroll.gif")
   diceNum2.setAttribute("src", "../assets/img/diceroll.gif")
-
-  
 
   diceNum1.classList.add("dynamic-image");
   diceNum2.classList.add("dynamic-image");
@@ -65,6 +59,10 @@ function rollTheDice() {
   setTimeout(() => {
     let randomNumber1 = Math.floor(Math.random() * 6) + 1;
     let randomNumber2 = Math.floor(Math.random() * 6) + 1;
+
+    /* adjust dynamic and static imgs */
+    diceNum1.style.transform = "scale(1)";
+    diceNum2.style.transform = "scale(1)";
 
     diceNum1.setAttribute('src', '../assets/img/dice' + randomNumber1 + '.png');
     diceNum2.setAttribute('src', '../assets/img/dice' + randomNumber2 + '.png');
