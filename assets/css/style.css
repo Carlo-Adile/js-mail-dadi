@@ -6,6 +6,10 @@ body{
   background-repeat: no-repeat;
 }
 
+.ms_my_card{
+  min-height:350px;
+}
+
 .dice_img{
   width:100px;
   height:100px;
