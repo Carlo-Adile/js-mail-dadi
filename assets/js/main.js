@@ -17,7 +17,7 @@ for(index =0; index < authorizedMail.length; index++){
 /* esercizio 2 */
 
 function getRandomInt(max) {
-  return Math.floor(Math.random() * max);
+  return Math.floor(Math.random() * max + 1);
 }
 
 const myRoll = getRandomInt(6);
